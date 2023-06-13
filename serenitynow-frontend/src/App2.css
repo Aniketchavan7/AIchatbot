@@ -1,0 +1,135 @@
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.App {
+  text-align: center;
+  background-color: #292d3e;
+  color: #ffffff;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.chatbot-title {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.cute-bot-image {
+  width: 40px;
+  height: 40px;
+}
+
+.chat-window {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #343a4e;
+  border-radius: 6px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.message-container {
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding: 10px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.chat-message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.bot .message-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user .message-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.message-content {
+  background-color: #464c63;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.input-form {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #292d3e;
+  border-top: 1px solid #343a4e;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+input[type='text'] {
+  flex-grow: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #343a4e;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #464c63;
+  outline: none;
+}
+
+.send-button,
+.camera-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-left: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4d79ff;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.send-button:hover,
+.camera-button:hover {
+  background-color: #2653e6;
+}
